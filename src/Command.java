@@ -1,4 +1,3 @@
-public enum Command {
-    FIXMAP, CREATE, MOVE
-
+public interface Command{
+    public void execute();
 }
