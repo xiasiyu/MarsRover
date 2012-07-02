@@ -1,13 +1,15 @@
 public class CmdSetMap implements Command{
-    private Receiver receiver;
+    private CommandReceiver commandReceiver;
     private int xBorder;
     private int yBorder;
 
-    public CmdSetMap(Receiver recv, int x, int y){
-        this.receiver = recv;
+    public CmdSetMap(CommandReceiver recv, int x, int y){
+       commandReceiver = recv;
+       xBorder = x;
+       yBorder = y;
     }
 
     public void execute() {
-        receiver.actionSetBorder(xBorder, yBorder);
+        commandReceiver.actionSetBorder(xBorder, yBorder);
     }
 }

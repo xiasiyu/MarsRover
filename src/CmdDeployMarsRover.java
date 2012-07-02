@@ -1,22 +1,20 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class CmdDeployMarsRover implements Command{
-    private Receiver receiver;
-    private int x;
-    private int y;
+    private CommandReceiver commandReceiver;
+    private Position position;
     private DirectionState direction;
-    private LinkedList<MoveType> movements;
+    private ArrayList<MoveType> movements;
 
-    public CmdDeployMarsRover(Receiver receiver, int x, int y, DirectionState directionState, LinkedList<MoveType> movements){
-        this.receiver = receiver;
-        this.x = x;
-        this.y = y;
+    public CmdDeployMarsRover(CommandReceiver commandReceiver, Position position, DirectionState directionState, ArrayList<MoveType> movements){
+        this.commandReceiver = commandReceiver;
+        this.position = position;
         this.direction = directionState;
         this.movements = movements;
     }
 
 
     public void execute() {
-        receiver.actionDeployMarsRover(x, y, direction, movements);
+        commandReceiver.actionDeployMarsRover(position, direction, movements);
     }
 }

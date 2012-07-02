@@ -2,19 +2,17 @@ public class DirectionSouth extends DirectionState{
 
     @Override
     public DirectionState getLeftDirection() {
-        super.context.setDirectionState(Context.EAST);
-        return super.context.getDirectionState();
+        return DirectionEnum.EAST;
     }
 
     @Override
     public DirectionState getRightDirection() {
-        super.context.setDirectionState(Context.WEST);
-        return super.context.getDirectionState();
+        return DirectionEnum.WEST;
     }
 
     @Override
-    public Postion move() {
-        return new Postion(0, -1);
+    public Position move() {
+        return new Position(0, -1);
     }
 
     @Override
