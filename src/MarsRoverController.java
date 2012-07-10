@@ -6,10 +6,7 @@ public class MarsRoverController extends CommandReceiver {
     private Position adjustMove = new Position(0,0);
 
     @Override
-    public void actionDeployMarsRover(Position position, DirectionState direction, ArrayList<MoveType> movements) {
-        MarsRover marsRover = new MarsRover(position, direction);
-        marsRovers.add(marsRover);
-        marsRover.execCommand(movements);
+    public void actionSetBorder(int x, int y) {
     }
 
     public void printAllMarsRoverPosition(){
@@ -20,5 +17,26 @@ public class MarsRoverController extends CommandReceiver {
             }
             System.out.println(marsRover.getCurrentPosition());
         }
+    }
+
+    @Override
+      public void actionDeployMarsRover(Position position, DirectionState direction, ArrayList<MoveType> movements) {
+          MarsRover marsRover = new MarsRover(position, direction);
+          marsRovers.add(marsRover);
+          marsRover.execCommand(movements);
+      }
+
+    @Override
+    public Object actionTurnLeft(DirectionState directionState) {
+        return null;
+    }
+
+    @Override
+    public Object actionTurnRight(DirectionState directionState) {
+        return null;
+    }
+
+    @Override
+    public void actionMove(Position position) {
     }
 }

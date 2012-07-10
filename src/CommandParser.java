@@ -69,7 +69,6 @@ public class CommandParser {
     public DirectionState getDirectionStateFromInput(String input) {
         char firstLetter = input.charAt(3);
         return directionMap.get(Character.toString(firstLetter));
-
     }
 
 }

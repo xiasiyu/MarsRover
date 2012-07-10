@@ -1,4 +1,4 @@
-public class DirectionEast extends DirectionState{
+public class DirectionEast extends DirectionState {
 
     @Override
     public DirectionState getLeftDirection() {
@@ -19,4 +19,5 @@ public class DirectionEast extends DirectionState{
     public String toPrintString() {
         return "E";
     }
+
 }
