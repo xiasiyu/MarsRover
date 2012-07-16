@@ -100,12 +100,15 @@
                             pinItButton.setAttribute('class', 'pinned');
                         else
                             wait();
-                    }, 25);
+
+}, 25);
                 };
 
                 wait();
-                return false;
-            };
+
+return false;
+
+};
         }
 
         function receiveCount(data) {
@@ -127,17 +130,20 @@
                 count = Math.floor(count / 1000000) + "M+";
             else if (count > 999999999)
                 count = "++";
-            countBubble.innerHTML = count;
+
+countBubble.innerHTML = count;
         }
 
         window.onload = function() {
             var pinItButton = document.getElementById('PinItButton');
             var pinItCount = document.getElementById('PinItCount');
 
-            // Parse args
+
+// Parse args
 //            var vars = {}, url = window.location.href;
-            var vars = {}, url = "http://pinterest.com/pin/create/button/?url=http://www.realestate.com.au/home-ideas/image-facades-469064?sortedBy=mostRecent";
-            var pairs = url.slice(url.indexOf('?') + 1).split('&');
+
+var vars = {}, url = "http%3A%2F%2Fwww.realestate.com.au%2Fhome-ideas%2Fimage-facades-469064&media=http%3A%2F%2Fi2.au.reastatic.net%2Fhome-ideas%2Fraw%2F916ee6d2403e6191319e00e3ddf613a8edf9ae30b18522e8987c6f22b679775f%2Ffacades.jpg&ref=http%3A%2F%2Fwww.realestate.com.au%2Fhome-ideas%2Fimage-facades-469064%3FsortedBy%3DmostRecent"
+var pairs = url.slice(url.indexOf('?') + 1).split('&');
             for (var i = 0; i < pairs.length; i++) {
                 var parts = pairs[i].split('=');
                 vars[parts[0]] = parts[1];
