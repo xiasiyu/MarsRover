@@ -7,8 +7,7 @@ public class CmdPrintAll implements Command{
     }
 
     @Override
-    public Object execute() {
+    public void execute() {
         marsRoverController.printAllMarsRoverPosition();
-        return null;
     }
 }

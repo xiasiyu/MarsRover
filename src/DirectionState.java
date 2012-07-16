@@ -29,7 +29,6 @@ public class DirectionState extends CommandReceiver {
 
     @Override
     public Object actionTurnLeft(DirectionState directionState) {
-        System.out.println(this.getLeftDirection());
         return this.getLeftDirection();
     }
 

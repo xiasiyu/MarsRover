@@ -11,7 +11,7 @@ public class CommandParser {
         moveCommandMap = createMoveCommandMap();
         directionMap = createDirectionMap();
 
-        if(input.equals("OVER")){
+        if(input.equals("XXX")){
             return new CmdPrintAll(marsRoverController);
         }
         else if(input.length() > 2){

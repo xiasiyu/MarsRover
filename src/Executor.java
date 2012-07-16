@@ -22,7 +22,7 @@ public class Executor {
         prepareForPlateau();
         while (true) {
             input = bufferedReader.readLine();
-            if (input.equals("OVER")) {
+            if (input.equals("XXX")) {
                 dispatchCommand(commandInvoker, commandParser, input);
                 break;
             }
