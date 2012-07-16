@@ -58,9 +58,9 @@ public class CommandParser {
     private ArrayList<MoveType> parseCommandList(String input) {
         String[] in = input.substring(4).split("");
         ArrayList<MoveType> movements = new ArrayList<MoveType>();
-        for (String s : in) {
-            if(moveCommandMap.get(s) != null){
-                movements.add(moveCommandMap.get(s));
+        for (String move : in) {
+            if(moveCommandMap.get(move) != null){
+                movements.add(moveCommandMap.get(move));
             }
         }
         return movements;

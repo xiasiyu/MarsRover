@@ -5,10 +5,6 @@ public class MarsRoverController extends CommandReceiver {
     private LinkedList<MarsRover> marsRovers = new LinkedList<MarsRover>();
     private Position adjustMove = new Position(0,0);
 
-    @Override
-    public void actionSetBorder(int x, int y) {
-    }
-
     public void printAllMarsRoverPosition(){
         for (MarsRover marsRover : marsRovers) {
             adjustMove = Plateau.isMarsRoverOutOfPlateau(marsRover);
@@ -38,5 +34,9 @@ public class MarsRoverController extends CommandReceiver {
 
     @Override
     public void actionMove(Position position) {
+    }
+
+    @Override
+    public void actionSetBorder(int x, int y) {
     }
 }

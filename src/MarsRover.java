@@ -31,12 +31,8 @@ public class MarsRover extends CommandReceiver {
         return position.toPrintString() + " " + direction.toPrintString();
     }
 
-    private Map<MoveType, Command> createMovetypeMap(){
-        //TODO:receiver create hash map:  everycall return the same results
-        moveCommandMap.put(MoveType.L, new CmdTurnLeft(this));
-        moveCommandMap.put(MoveType.R, new CmdTurnRight(this));
-        moveCommandMap.put(MoveType.M, new CmdMove(this));
-        return moveCommandMap;
+    public DirectionState getDirection() {
+        return direction;
     }
 
     @Override
@@ -56,8 +52,11 @@ public class MarsRover extends CommandReceiver {
         position.add(direction.move());
     }
 
-    public DirectionState getDirection() {
-        return direction;
+    private Map<MoveType, Command> createMovetypeMap(){
+        moveCommandMap.put(MoveType.L, new CmdTurnLeft(this));
+        moveCommandMap.put(MoveType.R, new CmdTurnRight(this));
+        moveCommandMap.put(MoveType.M, new CmdMove(this));
+        return moveCommandMap;
     }
 
     @Override

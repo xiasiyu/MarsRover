@@ -14,7 +14,6 @@ public class Executor {
         bufferedReader = new BufferedReader(inputStreamReader);
         commandInvoker = new CommandInvoker();
         commandParser = new CommandParser();
-
     }
 
     public void execute() throws IOException {
