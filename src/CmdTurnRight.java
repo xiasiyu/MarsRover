@@ -9,7 +9,7 @@ public class CmdTurnRight implements Command {
     }
 
     @Override
-    public void execute() {
-        commandReceiver.actionTurnRight(directionState);
+    public Object execute() {
+        return commandReceiver.actionTurnRight(directionState);
     }
 }

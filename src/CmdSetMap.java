@@ -9,7 +9,8 @@ public class CmdSetMap implements Command{
        yBorder = y;
     }
 
-    public void execute() {
+    public Object execute() {
         commandReceiver.actionSetBorder(xBorder, yBorder);
+        return null;
     }
 }

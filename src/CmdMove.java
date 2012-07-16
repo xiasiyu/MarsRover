@@ -7,8 +7,14 @@ public class CmdMove implements Command {
         this.position = position;
     }
 
+    public void setCommandReceiver(CommandReceiver recv){
+        this.commandReceiver = recv;
+    }
+
     @Override
-    public void execute() {
+    public Object execute() {
+
         commandReceiver.actionMove(position);
+        return null;
     }
 }

@@ -14,7 +14,8 @@ public class CmdDeployMarsRover implements Command{
     }
 
 
-    public void execute() {
+    public Object execute() {
         commandReceiver.actionDeployMarsRover(position, direction, movements);
+        return null;
     }
 }
